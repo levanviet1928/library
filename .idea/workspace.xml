@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a0e64bb8-2bfd-4644-92fb-53c2ba8037df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/BookCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/BookCtrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/DocumentCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/DocumentCtrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/BillDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/BillDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/BookDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/BookDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/BookStateDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/BookStateDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/BorrowDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/BorrowDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/DocumentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/DocumentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/EmployeeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/PersonDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/ReaderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/ReaderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/model/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/model/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/model/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/model/Document.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/view/view.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/view/view.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/BookCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BookCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/DocumentCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DocumentCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BillDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BillDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BookStateDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookStateDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BorrowDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BorrowDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/DocumentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DocumentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/EmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ReaderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/view.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/view.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1aSmHQ0OFuqrywfRCsCUm5DFfvA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\ProjectJava\libraryManagement\src\controller" />
+      <recent name="G:\ProjectJava\libraryManagement\src\inter" />
+      <recent name="G:\ProjectJava\libraryManagement\src\model" />
+      <recent name="G:\ProjectJava\libraryManagement\src\dao" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.view">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Test" />
+      <module name="libraryManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.test" />
+      <module name="libraryManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="view" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.view" />
+      <module name="libraryManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.view" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0e64bb8-2bfd-4644-92fb-53c2ba8037df" name="Default Changelist" comment="" />
+      <created>1586737280511</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586737280511</updated>
+    </task>
+    <task id="LOCAL-00001" summary="update menu">
+      <created>1588558529453</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588558529453</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add Book">
+      <created>1588760464634</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588760464634</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update menu" />
+    <MESSAGE value="add Book" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Book" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>
