@@ -79,28 +79,16 @@ public class DocumentDAO implements DAO<Document> {
 	 * @return
 	 */
 	public boolean edit(Document doc) {
-//		Connection connection = DBConnection.getInstance().getConnection();
-//
-//
-//		String sql = "UPDATE Document SET docName = ?, author = ? , publishYear = ?, quantity = ? WHERE ID = ?";
-//		try {
-//			PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//			preparedStatement.setString(1, doc.getDocumentName());
-//			preparedStatement.setString(2, doc.getAuthor());
-//			preparedStatement.setInt(3, doc.getPublishYear());
-//			preparedStatement.setInt(4, doc.getQuantity());
-//			preparedStatement.setString(5, doc.getDocID());
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		return true;
-		var sql = "UPDATE dbo.Document SET docName = ? WHERE ID = ?";
-		var conn = DBConnection.getInstance().getConnection();
+		Connection connection = DBConnection.getInstance().getConnection();
+		String sql = "UPDATE Document SET docName = ?, author = ? , publishYear = ?, quantity = ? WHERE ID = ?";
 		try {
-			var prepare = conn.prepareStatement(sql);
+			PreparedStatement prepare = connection.prepareStatement(sql);
 			prepare.setString(1, doc.getDocumentName());
-			prepare.setString(2, doc.getDocID());
-			var result = prepare.executeUpdate();
+			prepare.setString(2, doc.getAuthor());
+			prepare.setInt(3, doc.getPublishYear());
+			prepare.setInt(4, doc.getQuantity());
+			prepare.setString(5, doc.getDocID());
+			int result = prepare.executeUpdate();
 			if (result > 0) {
 				return true;
 			}
@@ -108,6 +96,7 @@ public class DocumentDAO implements DAO<Document> {
 			e.printStackTrace();
 		}
 		return false;
+
 	}
 
 	/**

@@ -1,6 +1,7 @@
 package controller;
 
 import dao.BookDAO;
+import dao.DocumentDAO;
 import model.Book;
 import model.Document;
 
@@ -64,47 +65,51 @@ public class BookCtrl extends DocumentCtrl {
         return b;
     }
 
-//    public void editBook() {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Nhập mã sách muốn sửa: ví dụ (DCMT_xxxxxx)");
-//        String bookID = "";
-//        do {
-//            bookID = sc.nextLine();
-//        } while (!checkID(bookID));
-//        BookDAO bookDAO = new BookDAO();
-//
-//        boolean idValid = bookDAO.isIDValid(bookID, "dbo.Book");
-//        while (idValid) {
-//            System.out.println("Nhập lại mã sách muốn sửa: ví dụ (DCMT_xxxxxx)");
-//            bookID = sc.nextLine();
-//            idValid = bookDAO.isIDValid(bookID, "dbo.Book");
-//        }
-//        Document doc = new Document(bookID);
-//        String bookType;
-//        String kinds[] = {"Khoa học", "Nghệ thuật", "Kinh tế", "Ẩm thực", "Công nghệ thông tin"};
-//        boolean isOK = false;
-//        int choice = 0;
-//        do {
-//            try {
-//                System.out.println("Nhập loại sách:");
-//                System.out.println("1. Khoa học");
-//                System.out.println("2. Nghệ thuật");
-//                System.out.println("3. Kinh tế");
-//                System.out.println("4. Ẩm thực");
-//                System.out.println("5. Công nghệ thông tin");
-//                choice = Integer.parseInt(sc.nextLine());
-//                isOK = true;
-//            } catch (Exception e) {
-//                System.out.println("Nhập lại thể loại sách");
-//            }
-//        } while (!isOK);
-//        bookType = kinds[choice - 1];
-//        Book b = new Book(doc.getDocID(), bookID, bookType);
-//        boolean result = bookDAO.edit(b);
-//        if (result) {
-//            System.out.println("Sửa lại thông tin thành công");
-//        } else {
-//            System.out.println("Sửa lại thông tin thất bại");
-//        }
-//    }
+    public void editBook() {
+        DocumentCtrl documentCtrl = new DocumentCtrl();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập mã sách muốn sửa: ví dụ (DCMT_xxxxxx)");
+        String bookID = "";
+        do {
+            bookID = sc.nextLine();
+        } while (!checkID(bookID));
+        BookDAO bookDAO = new BookDAO();
+        boolean idValid = bookDAO.isIDValid(bookID, "dbo.Book");
+        while (idValid) {
+            System.out.println("Nhập lại mã sách muốn sửa: ví dụ (DCMT_xxxxxx)");
+            bookID = sc.nextLine();
+            idValid = bookDAO.isIDValid(bookID, "dbo.Book");
+        }
+        Document doc = documentCtrl.edit();
+        doc.setDocID(bookID);
+        String bookType;
+        String kinds[] = {"Khoa học", "Nghệ thuật", "Kinh tế", "Ẩm thực", "Công nghệ thông tin"};
+        boolean isOK = false;
+        int choice = 0;
+        do {
+            try {
+                System.out.println("Nhập loại sách:");
+                System.out.println("1. Khoa học");
+                System.out.println("2. Nghệ thuật");
+                System.out.println("3. Kinh tế");
+                System.out.println("4. Ẩm thực");
+                System.out.println("5. Công nghệ thông tin");
+                choice = Integer.parseInt(sc.nextLine());
+                isOK = true;
+            } catch (Exception e) {
+                System.out.println("Nhập lại thể loại sách");
+            }
+        } while (!isOK);
+        bookType = kinds[choice - 1];
+
+        Book b = new Book(doc.getDocID(), bookID, bookType);
+        boolean result = bookDAO.edit(b);
+        DocumentDAO documentDAO = new DocumentDAO();
+        boolean resultDoc = documentDAO.edit(doc);
+        if (result && resultDoc) {
+            System.out.println("Sửa lại thông tin thành công");
+        } else {
+            System.out.println("Sửa lại thông tin thất bại");
+        }
+    }
 }

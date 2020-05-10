@@ -44,7 +44,7 @@ public class Book extends Document {
 	@Override
 	public String toString() {
 		return super.toString() +
-				"bookID='" + bookID + '\'' +
+				", bookID='" + bookID + '\'' +
 				", type='" + type + '\'';
 	}
 }

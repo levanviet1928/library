@@ -107,7 +107,9 @@ public class view {
                     bookCtrl.show(book);
                     break;
                 case 2:
-                    editBook();
+                    System.out.println("Sửa thông tin sách");
+                    BookCtrl bookCtrl1 = new BookCtrl();
+                    bookCtrl1.editBook();
                     break;
                 case 3:
                     System.out.println("Xóa sách");
