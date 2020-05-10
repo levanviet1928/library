@@ -15,10 +15,9 @@ public class BorrowDAO implements DAO<Borrow> {
 
 	/**
      *
-	 * @param id
      * @return
 	 */
-    public boolean edit(String id, Borrow key) {
+	public boolean edit(Borrow key) {
 		// TODO - implement BorrowDAO.edit
 		throw new UnsupportedOperationException();
 	}

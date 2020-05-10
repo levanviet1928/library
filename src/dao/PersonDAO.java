@@ -15,10 +15,9 @@ public class PersonDAO implements DAO<Person> {
 
 	/**
      *
-	 * @param id
      * @return
 	 */
-    public boolean edit(String id, Person key) {
+	public boolean edit(Person key) {
 		// TODO - implement PersonDAO.edit
 		throw new UnsupportedOperationException();
 	}

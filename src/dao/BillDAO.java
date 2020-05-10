@@ -54,7 +54,7 @@ public class BillDAO implements DAO<Bill> {
     }
 
     @Override
-    public boolean edit(String id, Bill key) {
+    public boolean edit(Bill key) {
         return false;
     }
 

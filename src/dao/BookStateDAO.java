@@ -13,10 +13,9 @@ public class BookStateDAO implements DAO<BookState> {
 
 	/**
      *
-	 * @param id
      * @return
 	 */
-    public boolean edit(String id, BookState key) {
+	public boolean edit(BookState key) {
 		// TODO - implement BookStateDAO.edit
 		throw new UnsupportedOperationException();
 	}

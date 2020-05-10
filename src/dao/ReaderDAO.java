@@ -18,10 +18,9 @@ public class ReaderDAO extends PersonDAO {
     }
 
     /**
-     * @param id
      * @return
      */
-    public boolean edit(String id, Person key) {
+    public boolean edit(Person key) {
         // TODO - implement ReaderDAO.edit
         throw new UnsupportedOperationException();
     }

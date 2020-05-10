@@ -23,11 +23,9 @@ public class EmployeeDAO extends PersonDAO {
 	}
 
 	/**
-     *
-	 * @param id
      * @return
 	 */
-    public boolean edit(String id, Person key) {
+	public boolean edit(Person key) {
 		// TODO - implement EmployeeDAO.edit
 		throw new UnsupportedOperationException();
 	}

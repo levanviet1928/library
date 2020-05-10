@@ -24,23 +24,8 @@ public class DocumentCtrl implements Ctr<Document> {
     @Override
     public Document addFromKeyBroad() {
         Scanner sc = new Scanner(System.in);
-
-        // DOC_012345
-//        System.out.println("Nhập mã tài liệu:(ví dụ : DOC_xxxxxx)");
         String docId = "";
         DocumentDAO documentDAO = new DocumentDAO();
-//        do {
-//            docId = sc.nextLine();
-//        } while (!checkID(docId));
-//
-//        boolean isIDvalid = documentDAO.isIDValid(docId, "dbo.Document");
-//        while (!isIDvalid) {
-//            System.out.println("Mã đã tồn tại");
-//            System.out.println("Nhập mã tài liệu:(ví dụ : DOC_xxxxxx)");
-//            docId = sc.nextLine();
-//            isIDvalid = documentDAO.isIDValid(docId, "dbo.Document");
-//        }
-
         System.out.println("Nhập tiêu đề: ");
         String docName = sc.nextLine();
         boolean isNamevalid = documentDAO.isNameValid(docName);
@@ -72,10 +57,4 @@ public class DocumentCtrl implements Ctr<Document> {
 
     }
 
-//    public void editDocument(){
-//        Document doc = addFromKeyBroad();
-//        DocumentDAO documentDAO = new DocumentDAO();
-//        BookCtrl bookCtrl =
-//        documentDAO.edit(id, doc);
-//    }
 }

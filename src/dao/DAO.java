@@ -12,10 +12,9 @@ public interface DAO<T> {
 
 	/**
      *
-	 * @param id
      * @return
 	 */
-    boolean edit(String id, T key);
+	boolean edit(T key);
 
 	/**
 	 * 

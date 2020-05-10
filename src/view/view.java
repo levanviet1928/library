@@ -61,6 +61,23 @@ public class view {
 
     }
 
+    private static void editBook() {
+        var scanner = new Scanner(System.in);
+        System.out.println("Nhập mã sách cần sửa: ");
+        var id = scanner.nextLine();
+        System.out.println("Nhập tên mới: ");
+        var newTitle = scanner.nextLine();
+        var bookDAO = new BookDAO();
+        var book = new Book(id);
+        book.setDocumentName(newTitle);
+        var result = bookDAO.edit(book);
+        if (result) {
+            System.out.println("Cập nhật thành công!");
+        } else {
+            System.out.println("Cập nhật thất bại! Kiểm tra lại mã tài liệu!");
+        }
+    }
+
     private int docFunction() {
         int n = 0;
         do {
@@ -90,9 +107,7 @@ public class view {
                     bookCtrl.show(book);
                     break;
                 case 2:
-                    System.out.println("Sửa thông tin sách");
-                    BookCtrl bookCtrl1 = new BookCtrl();
-                    bookCtrl1.editBook();
+                    editBook();
                     break;
                 case 3:
                     System.out.println("Xóa sách");
@@ -110,6 +125,7 @@ public class view {
         return n;
 
     }
+
 
     private int searchBookMenu() {
         int n = 0;

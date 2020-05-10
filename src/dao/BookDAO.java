@@ -45,25 +45,26 @@ public class BookDAO extends DocumentDAO {
 
 	/**
 	 *
-	 * @param id
+	 * @param 
 	 * @return
 	 */
-	public boolean edit(String id, Book b) {
-		Connection conn = DBConnection.getInstance().getConnection();
-		//ID, type, documentID
-		String sql = "UPDATE dbo.Book SET type = ? WHERE ID = ?";
-		try {
-			PreparedStatement prepare = conn.prepareStatement(sql);
-			prepare.setString(1, b.getType());
-			prepare.setString(2, id);
-			int result = prepare.executeUpdate();
-			if (result > 0) {
-				return true;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return false;
+	public boolean edit(Document document) {
+//		Connection conn = DBConnection.getInstance().getConnection();
+//		//ID, type, documentID
+//		String sql = "UPDATE dbo.Book SET type = ? WHERE ID = ?";
+//		try {
+//			PreparedStatement prepare = conn.prepareStatement(sql);
+//			prepare.setString(1, b.getType());
+//			prepare.setString(2, b.getBookID());
+//			int result = prepare.executeUpdate();
+//			if (result > 0) {
+//				return true;
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//		return false;
+		return super.edit(document);
 	}
 
 	/**
