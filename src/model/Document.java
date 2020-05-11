@@ -18,6 +18,13 @@ public class Document {
         this.quantity = quantity;
     }
 
+    public Document(String documentName, String author, int publishYear, int quantity) {
+        this.documentName = documentName;
+        this.author = author;
+        this.publishYear = publishYear;
+        this.quantity = quantity;
+    }
+
     public Document(String docID) {
         this.docID = docID;
     }

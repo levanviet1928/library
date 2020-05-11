@@ -4,7 +4,9 @@ import controller.BookCtrl;
 import dao.BookDAO;
 import dao.DocumentDAO;
 import model.Book;
+import model.Document;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -155,7 +157,13 @@ public class view {
             } while (!isOK);
             switch (n) {
                 case 1:
-                    System.out.println("Bạn chọn chức năng 1");
+                    System.out.println("Tìm kiếm theo tên");
+                    System.out.println("Mời nhập tên cần tìm kiếm");
+                    Scanner sc = new Scanner(System.in);
+                    String name = sc.nextLine();
+                    DocumentDAO doc = new DocumentDAO();
+                    ArrayList<Document> list = (ArrayList) doc.findByName(name);
+                    System.out.println(list);
                     break;
                 case 2:
                     System.out.println("Bạn chọn chức năng 2");

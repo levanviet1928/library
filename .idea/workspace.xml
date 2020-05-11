@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0e64bb8-2bfd-4644-92fb-53c2ba8037df" name="Default Changelist" comment="delete book">
+    <list default="true" id="a0e64bb8-2bfd-4644-92fb-53c2ba8037df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/BookCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/BookCtrl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/DocumentCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/DocumentCtrl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/BookDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/BookDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/DocumentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/DocumentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/model/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/model/Document.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/view/view.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/view/view.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/BookCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BookCtrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/DocumentCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DocumentCtrl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/DocumentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DocumentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Document.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/view.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/view.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -145,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589116051488</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="delete book">
+      <created>1589186757482</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589186757482</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,11 +168,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="update menu" />
     <MESSAGE value="add Book" />
     <MESSAGE value="edit book" />
     <MESSAGE value="delete book" />
     <option name="LAST_COMMIT_MESSAGE" value="delete book" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
