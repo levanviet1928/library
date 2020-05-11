@@ -112,4 +112,25 @@ public class BookCtrl extends DocumentCtrl {
             System.out.println("Sửa lại thông tin thất bại");
         }
     }
+
+    public boolean deleteBook() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập mã sách muốn xóa: ví dụ (DCMT_xxxxxx)");
+        String bookID = "";
+        do {
+            bookID = sc.nextLine();
+        } while (!checkID(bookID));
+        BookDAO bookDAO = new BookDAO();
+        boolean idValid = bookDAO.isIDValid(bookID, "dbo.Book");
+        while (idValid) {
+            System.out.println("Mã không tồn tại. Nhập lại:");
+            bookID = sc.nextLine();
+            idValid = bookDAO.isIDValid(bookID, "dbo.Book");
+        }
+        boolean result = bookDAO.remove(bookID);
+        if (result) {
+            return true;
+        }
+        return false;
+    }
 }

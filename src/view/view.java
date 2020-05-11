@@ -2,6 +2,7 @@ package view;
 
 import controller.BookCtrl;
 import dao.BookDAO;
+import dao.DocumentDAO;
 import model.Book;
 
 import java.util.Scanner;
@@ -61,22 +62,6 @@ public class view {
 
     }
 
-    private static void editBook() {
-        var scanner = new Scanner(System.in);
-        System.out.println("Nhập mã sách cần sửa: ");
-        var id = scanner.nextLine();
-        System.out.println("Nhập tên mới: ");
-        var newTitle = scanner.nextLine();
-        var bookDAO = new BookDAO();
-        var book = new Book(id);
-        book.setDocumentName(newTitle);
-        var result = bookDAO.edit(book);
-        if (result) {
-            System.out.println("Cập nhật thành công!");
-        } else {
-            System.out.println("Cập nhật thất bại! Kiểm tra lại mã tài liệu!");
-        }
-    }
 
     private int docFunction() {
         int n = 0;
@@ -108,11 +93,12 @@ public class view {
                     break;
                 case 2:
                     System.out.println("Sửa thông tin sách");
-                    BookCtrl bookCtrl1 = new BookCtrl();
-                    bookCtrl1.editBook();
+                    BookCtrl bookCtrlEdit = new BookCtrl();
+                    bookCtrlEdit.editBook();
                     break;
                 case 3:
                     System.out.println("Xóa sách");
+                    deleteBook();
                     break;
                 case 4:
                     System.out.println("Tìm kiếm sách theo thông tin");
@@ -128,7 +114,26 @@ public class view {
 
     }
 
-
+    private void deleteBook() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập mã sách muốn xóa: ví dụ (DCMT_xxxxxx)");
+        String bookID = sc.nextLine();
+        BookDAO bookDAO = new BookDAO();
+        DocumentDAO documentDAO = new DocumentDAO();
+        boolean idValid = bookDAO.isIDValid(bookID, "dbo.Book");
+        while (idValid) {
+            System.out.println("Mã không tồn tại. Nhập lại:");
+            bookID = sc.nextLine();
+            idValid = bookDAO.isIDValid(bookID, "dbo.Book");
+        }
+        boolean result = bookDAO.remove(bookID);
+        boolean resultDoc = documentDAO.remove(bookID);
+        if (result && resultDoc) {
+            System.out.println("Xóa sách thành công");
+        } else {
+            System.out.println("Xóa sách thất bại");
+        }
+    }
     private int searchBookMenu() {
         int n = 0;
         do {

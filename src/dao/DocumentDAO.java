@@ -42,8 +42,8 @@ public class DocumentDAO implements DAO<Document> {
 		}
 		return true;
 	}
+
 	/**
-	 * 
 	 * @param doc
 	 */
 	public void add(Document doc) {
@@ -65,12 +65,22 @@ public class DocumentDAO implements DAO<Document> {
 	}
 
 	/**
-	 *
 	 * @param id
 	 * @return
 	 */
 	public boolean remove(String id) {
-		//UPDATE NHANVIEN SET DIACHI = 'Hanoi' WHERE ID = 3;
+		Connection conn = DBConnection.getInstance().getConnection();
+		String sql = "DELETE FROM dbo.Document WHERE ID = ?";
+		try {
+			PreparedStatement prepare = conn.prepareStatement(sql);
+			prepare.setString(1, id);
+			int result = prepare.executeUpdate();
+			if (result > 0) {
+				return true;
+			}
+		} catch (SQLException e) {
+			e.getStackTrace();
+		}
 		return false;
 	}
 
@@ -100,7 +110,6 @@ public class DocumentDAO implements DAO<Document> {
 	}
 
 	/**
-	 * 
 	 * @param name
 	 */
 	public List<Document> findByName(String name) {
@@ -109,7 +118,6 @@ public class DocumentDAO implements DAO<Document> {
 	}
 
 	/**
-	 * 
 	 * @param author
 	 */
 	public List<Document> findByAuthor(String author) {
@@ -118,7 +126,6 @@ public class DocumentDAO implements DAO<Document> {
 	}
 
 	/**
-	 * 
 	 * @param id
 	 */
 	public Document findByID(String id) {

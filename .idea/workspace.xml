@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0e64bb8-2bfd-4644-92fb-53c2ba8037df" name="Default Changelist" comment="">
+    <list default="true" id="a0e64bb8-2bfd-4644-92fb-53c2ba8037df" name="Default Changelist" comment="delete book">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/BookCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/BookCtrl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/DocumentCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/DocumentCtrl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/BookDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/BookDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/BookStateDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/BookStateDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/BorrowDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/BorrowDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/DocumentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/DocumentDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/EmployeeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/PersonDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/ReaderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/ReaderDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/model/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/model/Book.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/view/view.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/view/view.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/BookCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BookCtrl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/DocumentCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DocumentCtrl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/DocumentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DocumentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/view.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/view.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -172,8 +165,8 @@
     <MESSAGE value="update menu" />
     <MESSAGE value="add Book" />
     <MESSAGE value="edit book" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit book" />
+    <MESSAGE value="delete book" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete book" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

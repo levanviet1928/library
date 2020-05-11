@@ -68,14 +68,8 @@ public class DocumentCtrl implements Ctr<Document> {
             }
         } while (!isOK);
         Document doc = new Document(docId, docName, author, publishYear, amount);
-
-//        if(result){
-//            System.out.println("Thêm document thành công");
-//        }else
-//        {
-//            System.out.println("Thêm tài liệu thất bại");
-//        }
         return doc;
     }
+
 
 }

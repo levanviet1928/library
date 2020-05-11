@@ -39,8 +39,20 @@ public class BookDAO extends DocumentDAO {
 	 * @return
 	 */
 	public boolean remove(String id) {
-		// TODO - implement BookDAO.remove
-		return true;
+		super.remove(id);
+		Connection conn = DBConnection.getInstance().getConnection();
+		String sql = "DELETE FROM dbo.Book WHERE ID = ?";
+		try {
+			PreparedStatement prepare = conn.prepareStatement(sql);
+			prepare.setString(1, id);
+			int result = prepare.executeUpdate();
+			if (result > 0) {
+				return true;
+			}
+		} catch (SQLException e) {
+			e.getStackTrace();
+		}
+		return false;
 	}
 
 	/**
