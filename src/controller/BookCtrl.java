@@ -113,4 +113,23 @@ public class BookCtrl extends DocumentCtrl {
         }
     }
 
+    @Override
+    public void findByName() {
+        super.findByName();
+    }
+
+    @Override
+    public void findByAuthor() {
+        super.findByAuthor();
+    }
+
+    @Override
+    public void findByYear() {
+        super.findByYear();
+    }
+
+    @Override
+    public void findByType() {
+        super.findByType();
+    }
 }

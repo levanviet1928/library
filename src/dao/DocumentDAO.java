@@ -85,6 +85,11 @@ public class DocumentDAO implements DAO<Document> {
         return false;
     }
 
+    @Override
+    public Document findByID(String id) {
+        return null;
+    }
+
     /**
      * @param
      * @return
@@ -116,17 +121,17 @@ public class DocumentDAO implements DAO<Document> {
     public List<Document> findByName(String name) {
         Connection conn = DBConnection.getInstance().getConnection();
         ArrayList<Document> listDoc = new ArrayList<>();
-        String sql = "SELECT ID, docName, author, publishYear, quantity FROM dbo.Document WHERE docName = ?";
+        String sql = "SELECT * FROM dbo.Document WHERE docName like ?";
         try {
             PreparedStatement prepare = conn.prepareStatement(sql);
-            prepare.setString(1, name);
+            prepare.setString(1, "%" + name + "%");
             ResultSet result = prepare.executeQuery();
             while (result.next()) {
                 String docID = result.getString("ID");
                 String docName = result.getString("docName");
                 String author = result.getString("author");
-                int publishYear = result.getInt(4);
-                int quantity = result.getInt(5);
+                int publishYear = result.getInt("publishYear");
+                int quantity = result.getInt("quantity");
                 listDoc.add(new Document(docID, docName, author, publishYear, quantity));
             }
         } catch (SQLException e) {
@@ -139,16 +144,52 @@ public class DocumentDAO implements DAO<Document> {
      * @param author
      */
     public List<Document> findByAuthor(String author) {
-        // TODO - implement DocumentDAO.findByAuthor
-        throw new UnsupportedOperationException();
+        Connection conn = DBConnection.getInstance().getConnection();
+        ArrayList<Document> listDoc = new ArrayList<>();
+        String sql = "SELECT * FROM dbo.Document WHERE author like ?";
+        try {
+            PreparedStatement prepare = conn.prepareStatement(sql);
+            prepare.setString(1, "%" + author + "%");
+            ResultSet result = prepare.executeQuery();
+            while (result.next()) {
+                String docID = result.getString("ID");
+                String docName = result.getString("docName");
+                String author1 = result.getString("author");
+                int publishYear = result.getInt("publishYear");
+                int quantity = result.getInt("quantity");
+                listDoc.add(new Document(docID, docName, author1, publishYear, quantity));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listDoc;
     }
 
     /**
-     * @param id
+     * @param type
      */
-    public Document findByID(String id) {
-        // TODO - implement DocumentDAO.findByID
-        throw new UnsupportedOperationException();
+    public List<Document> findByType(String type) {
+        Connection conn = DBConnection.getInstance().getConnection();
+        ArrayList<Document> listDoc = new ArrayList<>();
+        String sql = "SELECT D.ID, d.docName, d.author, d.publishYear, d.quantity, b.ID\n" +
+                "FROM dbo.Document D inner join dbo.Book B\n" +
+                "on D.ID = B.documentID\n" +
+                "WHERE type like ?";
+        try {
+            PreparedStatement prepare = conn.prepareStatement(sql);
+            prepare.setString(1, "%" + type + "%");
+            ResultSet result = prepare.executeQuery();
+            while (result.next()) {
+                String docID = result.getString("ID");
+                String docName = result.getString("docName");
+                String author1 = result.getString("author");
+                int publishYear = result.getInt("publishYear");
+                int quantity = result.getInt("quantity");
+                listDoc.add(new Document(docID, docName, author1, publishYear, quantity));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listDoc;
     }
-
 }

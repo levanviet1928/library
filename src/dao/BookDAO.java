@@ -84,44 +84,118 @@ public class BookDAO extends DocumentDAO {
      */
     @Override
     public List<Document> findByName(String name) {
-        ArrayList<Document> lstdoc = (ArrayList) super.findByName(name);
+        ArrayList<Document> listdoc = new ArrayList<>();
         Connection conn = DBConnection.getInstance().getConnection();
-        String sql = "SELECT b.type\n" +
-                "FROM dbo.Book b INNER JOIN dbo.Document d \n" +
-                "ON b.documentID = d.ID\n" +
-                "WHERE d.docName = ?  ";
+        String sql = "SELECT D.ID, d.docName, d.author, d.publishYear, d.quantity, b.ID, b.type\n" +
+                "FROM dbo.Document D inner join dbo.Book B\n" +
+                "on D.ID = B.documentID\n" +
+                "WHERE docName like  ?";
         try {
             PreparedStatement prepare = conn.prepareStatement(sql);
-            prepare.setString(1, name);
+            prepare.setString(1, "%" + name + "%");
             ResultSet result = prepare.executeQuery();
             while (result.next()) {
+                String docID = result.getString("ID");
+                String docName = result.getString("docName");
+                String author1 = result.getString("author");
+                int publishYear = result.getInt("publishYear");
+                int quantity = result.getInt("quantity");
+                String bookID = result.getString("ID");
                 String type = result.getString("type");
+                listdoc.add(new Book(docID, docName, author1, publishYear, quantity, bookID, type));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return lstdoc;
+        return listdoc;
     }
 
     @Override
     public List<Document> findByAuthor(String author) {
-        return super.findByAuthor(author);
+        ArrayList<Document> listdoc = new ArrayList<>();
+        Connection conn = DBConnection.getInstance().getConnection();
+        String sql = "SELECT D.ID, d.docName, d.author, d.publishYear, d.quantity, b.ID, b.type\n" +
+                "FROM dbo.Document D inner join dbo.Book B\n" +
+                "on D.ID = B.documentID\n" +
+                "WHERE author like  ?";
+        try {
+            PreparedStatement prepare = conn.prepareStatement(sql);
+            prepare.setString(1, "%" + author + "%");
+            ResultSet result = prepare.executeQuery();
+            while (result.next()) {
+                String docID = result.getString("ID");
+                String docName = result.getString("docName");
+                String author1 = result.getString("author");
+                int publishYear = result.getInt("publishYear");
+                int quantity = result.getInt("quantity");
+                String bookID = result.getString("ID");
+                String type = result.getString("type");
+                listdoc.add(new Book(docID, docName, author1, publishYear, quantity, bookID, type));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listdoc;
     }
 
     /**
      * @param year
      */
     public List<Book> findByYear(int year) {
-        // TODO - implement BookDAO.findByYear
-        throw new UnsupportedOperationException();
+        ArrayList<Book> listdoc = new ArrayList<>();
+        Connection conn = DBConnection.getInstance().getConnection();
+        String sql = "SELECT D.ID, d.docName, d.author, d.publishYear, d.quantity, b.ID, b.type\n" +
+                "FROM dbo.Document D inner join dbo.Book B\n" +
+                "on D.ID = B.documentID\n" +
+                "WHERE publishYear like  ?";
+        try {
+            PreparedStatement prepare = conn.prepareStatement(sql);
+            prepare.setString(1, "%" + year + "%");
+            ResultSet result = prepare.executeQuery();
+            while (result.next()) {
+                String docID = result.getString("ID");
+                String docName = result.getString("docName");
+                String author1 = result.getString("author");
+                int publishYear = result.getInt("publishYear");
+                int quantity = result.getInt("quantity");
+                String bookID = result.getString("ID");
+                String type = result.getString("type");
+                listdoc.add(new Book(docID, docName, author1, publishYear, quantity, bookID, type));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listdoc;
     }
 
     /**
      * @param type
      */
-    public List<Book> findByType(String type) {
-        // TODO - implement BookDAO.findByType
-        throw new UnsupportedOperationException();
+    public List<Document> findByType(String type) {
+        Connection conn = DBConnection.getInstance().getConnection();
+        ArrayList<Document> listDoc = new ArrayList<>();
+        String sql = "SELECT D.ID, d.docName, d.author, d.publishYear, d.quantity, b.ID,b.type\n" +
+                "FROM dbo.Document D inner join dbo.Book B\n" +
+                "on D.ID = B.documentID\n" +
+                "WHERE type like ?";
+        try {
+            PreparedStatement prepare = conn.prepareStatement(sql);
+            prepare.setString(1, "%" + type + "%");
+            ResultSet result = prepare.executeQuery();
+            while (result.next()) {
+                String docID = result.getString("ID");
+                String docName = result.getString("docName");
+                String author1 = result.getString("author");
+                int publishYear = result.getInt("publishYear");
+                int quantity = result.getInt("quantity");
+                String bookID = result.getString("ID");
+                String type1 = result.getString("type");
+                listDoc.add(new Book(docID, docName, author1, publishYear, quantity, bookID, type1));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listDoc;
     }
 
 }

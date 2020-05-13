@@ -4,9 +4,7 @@ import controller.BookCtrl;
 import dao.BookDAO;
 import dao.DocumentDAO;
 import model.Book;
-import model.Document;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -136,8 +134,10 @@ public class view {
             System.out.println("Xóa sách thất bại");
         }
     }
+
     private int searchBookMenu() {
         int n = 0;
+
         do {
             System.out.println("-----------------TÌM KIẾM SÁCH -----------------");
             System.out.println("1. Theo tên sách");
@@ -158,21 +158,23 @@ public class view {
             switch (n) {
                 case 1:
                     System.out.println("Tìm kiếm theo tên");
-                    System.out.println("Mời nhập tên cần tìm kiếm");
-                    Scanner sc = new Scanner(System.in);
-                    String name = sc.nextLine();
-                    DocumentDAO doc = new DocumentDAO();
-                    ArrayList<Document> list = (ArrayList) doc.findByName(name);
-                    System.out.println(list);
+                    BookCtrl bookCtrl = new BookCtrl();
+                    bookCtrl.findByName();
                     break;
                 case 2:
-                    System.out.println("Bạn chọn chức năng 2");
+                    System.out.println("Tìm kiếm theo tác giả");
+                    BookCtrl bookCtrlAuthor = new BookCtrl();
+                    bookCtrlAuthor.findByAuthor();
                     break;
                 case 3:
-                    System.out.println("Bạn chọn chức năng 3");
+                    System.out.println("Tìm kiếm theo năm xuất bản");
+                    BookCtrl bookCtrlYear = new BookCtrl();
+                    bookCtrlYear.findByYear();
                     break;
                 case 4:
-                    System.out.println("Bạn chọn chức năng 4");
+                    System.out.println("Tìm kiếm theo thể loại sách");
+                    BookCtrl bookCtrlType = new BookCtrl();
+                    bookCtrlType.findByType();
                     break;
                 case 0:
                     break;
@@ -182,6 +184,7 @@ public class view {
         } while (n != 0);
         return n;
     }
+
 
     private int readerFun() {
         int n = 0;
