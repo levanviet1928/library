@@ -38,14 +38,18 @@ public class PersonCtrl implements Ctr<Person> {
 		do {
 			System.out.println("Nhập ngày tháng năm sinh: dạng dd-MM-yyyy(ví dụ 1999-12-22)");
 			DOB = sc.nextLine();
-		} while (checkDate(DOB));
+		} while (!checkDate(DOB));
 		Date date;
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+//        do {
+
 		try {
 			date = format.parse(DOB);
 		} catch (ParseException e) {
 			e.printStackTrace();
+//                System.out.println("Nhập sai định dạng. Mời nhập lại");
 		}
+//        } while (!checkDate(DOB));
 		System.out.println("Nhập giới tính");
 		String gender = sc.nextLine();
 		System.out.println("");

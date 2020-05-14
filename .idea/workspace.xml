@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0e64bb8-2bfd-4644-92fb-53c2ba8037df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/DocumentCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/DocumentCtrl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/PersonCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/PersonCtrl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/ReaderCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/ReaderCtrl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/view/view.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/view/view.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/PersonCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PersonCtrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ReaderCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ReaderCtrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/view.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/view.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589186757482</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add person">
+      <created>1589468515345</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589468515345</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,7 +172,8 @@
     <MESSAGE value="add Book" />
     <MESSAGE value="edit book" />
     <MESSAGE value="delete book" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete book" />
+    <MESSAGE value="add person" />
+    <option name="LAST_COMMIT_MESSAGE" value="add person" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
