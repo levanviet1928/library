@@ -1,6 +1,7 @@
 package view;
 
 import controller.BookCtrl;
+import controller.PersonCtrl;
 import dao.BookDAO;
 import dao.DocumentDAO;
 import model.Book;
@@ -208,6 +209,8 @@ public class view {
             switch (n) {
                 case 1:
                     System.out.println("Nhập mới bạn đọc");
+                    PersonCtrl per = new PersonCtrl();
+                    per.addFromKeyBroad();
                     break;
                 case 2:
                     System.out.println("Sửa thông tin bạn đọc");
