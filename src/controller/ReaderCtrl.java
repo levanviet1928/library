@@ -20,7 +20,7 @@ public class ReaderCtrl extends PersonCtrl {
         ReaderDAO readerDAO = new ReaderDAO();
         boolean check = readerDAO.checkValidID(readerID);
         while (check) {
-            System.out.println("Nhập căn cước công dân/chứng minh nhân dân: VD: 001234567891");
+            System.out.println("Nhập lại ID bạn đọc: ");
             readerID = sc.nextLine();
             check = readerDAO.checkValidID(readerID);
         }
@@ -63,7 +63,68 @@ public class ReaderCtrl extends PersonCtrl {
 
         readerDAO.add(reader);
         return reader;
+    }
 
+
+    public void editReader() {
+        Person per = super.edit();
+        Scanner sc = new Scanner(System.in);
+//        String readerID = "";
+//        do {
+//            System.out.println("Nhập ID bạn đọc theo mẫu BD_xxxxxx(VD BD_123456):");
+//            readerID = sc.nextLine();
+//        } while (!checkID(readerID));
+//        ReaderDAO readerDAO = new ReaderDAO();
+//        boolean check = readerDAO.checkValidID(readerID);
+//        while (check) {
+//            System.out.println("Nhập lại ID bạn đọc: ");
+//            readerID = sc.nextLine();
+//            check = readerDAO.checkValidID(readerID);
+//        }
+        ReaderDAO readerDAO = new ReaderDAO();
+        boolean isOK = false;
+        int choice = 0;
+        do {
+            try {
+                System.out.println("Nhập loại bạn đọc:");
+                System.out.println("1. Giáo viên");
+                System.out.println("2. Sinh viên");
+                System.out.println("3. Học sinh");
+                System.out.println("4. Nhân viên văn phòng");
+                System.out.println("5. Các cụ, bô lão");
+                System.out.println("6. Khác");
+                choice = Integer.parseInt(sc.nextLine());
+                isOK = true;
+            } catch (Exception e) {
+                System.out.println("Chọn sai mời chọn lại");
+            }
+        } while (!isOK);
+        String[] arrType = {"Giáo viên", "Sinh viên", "Học sinh", "Nhân viên văn phòng", "Các cụ, bô lão", "khác"};
+        String type = arrType[choice - 1];
+
+
+        String phone = "";
+        do {
+            System.out.println("Nhập số điện thoại: ");
+            phone = sc.nextLine();
+        } while (!checkPhone(phone));
+
+
+        String mail = "";
+        do {
+            System.out.println("Nhập email: ");
+            mail = sc.nextLine();
+        } while (!checkMail(mail));
+        Reader reader = new Reader(per.getPersonID(), per.getFullName(), per.getAddress(),
+
+                per.getDateOfBirth(), per.getGender(), type, phone, mail);
+
+        boolean result = readerDAO.edit(reader);
+        if (result) {
+            System.out.println("Cập nhật thành công");
+        } else {
+            System.out.println("Cập nhật thất bại");
+        }
     }
 
     private boolean checkID(String id) {

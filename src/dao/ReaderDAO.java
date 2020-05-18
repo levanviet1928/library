@@ -25,8 +25,25 @@ public class ReaderDAO extends PersonDAO {
      * @return
      */
     public boolean edit(Person key) {
-        // TODO - implement ReaderDAO.edit
-        throw new UnsupportedOperationException();
+        super.edit(key);
+        Connection conn = DBConnection.getInstance().getConnection();
+        String sql = "UPDATE dbo.Reader SET type = ? ,phoneNumber=?,email=? From Person p inner join Reader r " +
+                "on p.ID = r.personID  WHERE p.ID = ?";
+        try {
+            Reader reader = (Reader) key;
+            PreparedStatement prepare = conn.prepareStatement(sql);
+            prepare.setString(1, reader.getType());
+            prepare.setString(2, reader.getPhoneNumber());
+            prepare.setString(3, reader.getEmail());
+            prepare.setString(4, key.getPersonID());
+            int result = prepare.executeUpdate();
+            if (result > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     @Override

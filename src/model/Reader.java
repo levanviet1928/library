@@ -20,6 +20,13 @@ public class Reader extends Person {
 		this.email = email;
 	}
 
+	public Reader(String personID, String fullName, String address, Date dateOfBirth, String gender, String type, String phoneNumber, String email) {
+		super(personID, fullName, address, dateOfBirth, gender);
+		this.type = type;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+	}
+
 	public Reader(String readerID) {
 		this.readerID = readerID;
 	}

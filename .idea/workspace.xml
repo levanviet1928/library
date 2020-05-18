@@ -15,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/src/controller/ReaderCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ReaderCtrl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/PersonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/ReaderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/view.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/view.java" afterDir="false" />
@@ -172,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589468834287</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add reader">
+      <created>1589788841077</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589788841077</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,7 +201,8 @@
     <MESSAGE value="edit book" />
     <MESSAGE value="delete book" />
     <MESSAGE value="add person" />
-    <option name="LAST_COMMIT_MESSAGE" value="add person" />
+    <MESSAGE value="add reader" />
+    <option name="LAST_COMMIT_MESSAGE" value="add reader" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

@@ -219,7 +219,8 @@ public class view {
 
                     break;
                 case 2:
-                    System.out.println("Sửa thông tin bạn đọc");
+                    ReaderCtrl readerCtrl1 = new ReaderCtrl();
+                    readerCtrl1.editReader();
                     break;
                 case 3:
                     System.out.println("Xóa bạn đọc");
