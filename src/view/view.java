@@ -1,10 +1,11 @@
 package view;
 
 import controller.BookCtrl;
-import controller.PersonCtrl;
+import controller.ReaderCtrl;
 import dao.BookDAO;
 import dao.DocumentDAO;
 import model.Book;
+import model.Person;
 
 import java.util.Scanner;
 
@@ -209,8 +210,13 @@ public class view {
             switch (n) {
                 case 1:
                     System.out.println("Nhập mới bạn đọc");
-                    PersonCtrl per = new PersonCtrl();
-                    per.addFromKeyBroad();
+                    ReaderCtrl readerCtrl = new ReaderCtrl();
+                    Person reader = readerCtrl.addFromKeyBroad();
+                    if (reader != null) {
+                        readerCtrl.show(reader);
+                        System.out.println("Thêm dữ liệu thành công");
+                    }
+
                     break;
                 case 2:
                     System.out.println("Sửa thông tin bạn đọc");

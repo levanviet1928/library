@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0e64bb8-2bfd-4644-92fb-53c2ba8037df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/PersonCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/PersonCtrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/controller/ReaderCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/controller/ReaderCtrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/PersonDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/dao/ReaderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/dao/ReaderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/model/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/model/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/model/Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/libraryManagement/view/view.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/libraryManagement/view/view.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/PersonCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PersonCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ReaderCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ReaderCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ReaderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/view.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/view.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589468515345</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add person">
+      <created>1589468834287</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589468834287</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

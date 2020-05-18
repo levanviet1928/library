@@ -3,6 +3,10 @@ package dao;
 import model.Person;
 import model.Reader;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 public class ReaderDAO extends PersonDAO {
@@ -26,8 +30,41 @@ public class ReaderDAO extends PersonDAO {
     }
 
     @Override
+    public boolean checkValidID(String ID) {
+        Connection conn = DBConnection.getInstance().getConnection();
+        String sql = "SELECT ID FROM dbo.Reader WHERE ID = ?";
+        try {
+            PreparedStatement prepared = conn.prepareStatement(sql);
+            prepared.setString(1, ID);
+            ResultSet resultSet = prepared.executeQuery();
+            if (resultSet.next()) {
+                return true;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+
+    }
+
+    @Override
     public void add(Person key) {
         super.add(key);
+        Connection conn = DBConnection.getInstance().getConnection();
+        String sql = "INSERT INTO Reader(ID,type,phoneNumber,email,personID) VALUES (?,?,?,?,?)";
+        try {
+            Reader reader = (Reader) key;
+            PreparedStatement prepare = conn.prepareStatement(sql);
+            prepare.setString(1, reader.getReaderID());
+            prepare.setString(2, reader.getType());
+            prepare.setString(3, reader.getPhoneNumber());
+            prepare.setString(4, reader.getEmail());
+            prepare.setString(5, key.getPersonID());
+            prepare.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

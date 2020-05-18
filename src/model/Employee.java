@@ -11,17 +11,12 @@ public class Employee extends Person {
 	public Employee() {
 	}
 
-	public Employee(String fullName, String empID) {
-		super(fullName);
+    public Employee(String empID) {
 		this.empID = empID;
 	}
 
-	public Employee(String fullName) {
-		super(fullName);
-	}
-
-	public Employee(int personID, String fullName, String address, Date dateOfBirth, String gender, String empID,
-					String position, String shift) {
+    public Employee(String personID, String fullName, String address, Date dateOfBirth, String gender, String empID,
+                    String position, String shift) {
 		super(personID, fullName, address, dateOfBirth, gender);
 		this.empID = empID;
 		this.position = position;
