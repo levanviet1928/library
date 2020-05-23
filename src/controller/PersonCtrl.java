@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class PersonCtrl implements Ctr<Person> {
-    private boolean checkID(String id) {
+    public boolean checkPerID(String id) {
         String regex = "^\\d{12}$";
         if (id.matches(regex)) {
 			return true;
@@ -30,7 +30,7 @@ public class PersonCtrl implements Ctr<Person> {
 		do {
             System.out.println("Nhập căn cước công dân/chứng minh nhân dân VD: 001234567891");
 			perID = sc.nextLine();
-		} while (!checkID(perID));
+        } while (!checkPerID(perID));
 
         PersonDAO personDAO = new PersonDAO();
         boolean check = personDAO.checkValidID(perID);
@@ -76,7 +76,7 @@ public class PersonCtrl implements Ctr<Person> {
         do {
             System.out.println("Nhập căn cước công dân/chứng minh nhân dân VD: 001234567891");
             perID = sc.nextLine();
-        } while (!checkID(perID));
+        } while (!checkPerID(perID));
 
         PersonDAO personDAO = new PersonDAO();
         boolean check = personDAO.checkValidID(perID);
@@ -107,4 +107,9 @@ public class PersonCtrl implements Ctr<Person> {
         Person per = new Person(perID, fullName, address, date, gender);
         return per;
     }
+
+    public void delete() {
+
+    }
+
 }

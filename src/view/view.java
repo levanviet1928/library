@@ -219,11 +219,13 @@ public class view {
 
                     break;
                 case 2:
-                    ReaderCtrl readerCtrl1 = new ReaderCtrl();
-                    readerCtrl1.editReader();
+                    ReaderCtrl readerCtrlEdit = new ReaderCtrl();
+                    readerCtrlEdit.editReader();
                     break;
                 case 3:
                     System.out.println("Xóa bạn đọc");
+                    ReaderCtrl readerCtrlDelete = new ReaderCtrl();
+                    readerCtrlDelete.delete();
                     break;
                 case 4:
                     System.out.println("Tìm kiếm bạn đọc");

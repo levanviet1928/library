@@ -1,5 +1,6 @@
 package controller;
 
+import dao.PersonDAO;
 import dao.ReaderDAO;
 import model.Person;
 import model.Reader;
@@ -69,18 +70,6 @@ public class ReaderCtrl extends PersonCtrl {
     public void editReader() {
         Person per = super.edit();
         Scanner sc = new Scanner(System.in);
-//        String readerID = "";
-//        do {
-//            System.out.println("Nhập ID bạn đọc theo mẫu BD_xxxxxx(VD BD_123456):");
-//            readerID = sc.nextLine();
-//        } while (!checkID(readerID));
-//        ReaderDAO readerDAO = new ReaderDAO();
-//        boolean check = readerDAO.checkValidID(readerID);
-//        while (check) {
-//            System.out.println("Nhập lại ID bạn đọc: ");
-//            readerID = sc.nextLine();
-//            check = readerDAO.checkValidID(readerID);
-//        }
         ReaderDAO readerDAO = new ReaderDAO();
         boolean isOK = false;
         int choice = 0;
@@ -151,12 +140,38 @@ public class ReaderCtrl extends PersonCtrl {
         }
         return false;
     }
-	/**
-	 * 
-	 * @param p
-	 */
-	public void show(Person p) {
-        System.out.println(p);
-	}
 
+    /**
+     * @param p
+     */
+    public void show(Person p) {
+        System.out.println(p);
+    }
+
+    @Override
+    public void delete() {
+        Scanner sc = new Scanner(System.in);
+        String id = "";
+        PersonCtrl per = new ReaderCtrl();
+        do {
+            System.out.println("Nhập id cần xóa: ");
+            id = sc.nextLine();
+        } while (!per.checkPerID(id));
+
+        PersonDAO perDAO = new PersonDAO();
+        boolean check = perDAO.checkValidID(id);
+        while (!check) {
+            System.out.println("Mã chưa tồn tại hoặc sai. mời nhập lại");
+            id = sc.nextLine();
+            check = perDAO.checkValidID(id);
+        }
+        ReaderDAO readerDAO = new ReaderDAO();
+        boolean result = readerDAO.remove(id);
+        if (result) {
+            System.out.println("xóa thành công");
+        } else {
+            System.out.println("Xóa thất bại");
+        }
+
+    }
 }

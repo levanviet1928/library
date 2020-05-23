@@ -90,8 +90,19 @@ public class PersonDAO implements DAO<Person> {
      * @return
      */
     public boolean remove(String id) {
-        // TODO - implement PersonDAO.remove
-        throw new UnsupportedOperationException();
+        Connection conn = DBConnection.getInstance().getConnection();
+        String sql = "DELETE FROM dbo.Person Where ID  = ?";
+        try {
+            PreparedStatement prepare = conn.prepareStatement(sql);
+            prepare.setString(1, id);
+            int result = prepare.executeUpdate();
+            if (result > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
 }

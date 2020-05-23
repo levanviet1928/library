@@ -17,9 +17,24 @@ public class ReaderDAO extends PersonDAO {
      * @return
      */
     public boolean remove(String id) {
-        // TODO - implement ReaderDAO.remove
-        throw new UnsupportedOperationException();
+
+        Connection conn = DBConnection.getInstance().getConnection();
+        String sql = "DELETE FROM dbo.Reader Where personID  = ?";
+        try {
+            PreparedStatement prepare = conn.prepareStatement(sql);
+            prepare.setString(1, id);
+            int result = prepare.executeUpdate();
+            boolean resultPer = super.remove(id);
+            if (result > 0 && resultPer) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
+
+
 
     /**
      * @return
