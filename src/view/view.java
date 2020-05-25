@@ -258,15 +258,21 @@ public class view {
                     System.out.println("Nhập sai chức năng. Mời nhập lại: ");
                 }
             } while (!isOK);
+            ReaderCtrl readerCtrl = new ReaderCtrl();
             switch (n) {
+
                 case 1:
                     System.out.println("Tìm kiếm theo tên bạn đọc");
+                    readerCtrl.findByName();
+
                     break;
                 case 2:
                     System.out.println("Tìm kiếm theo mã bạn đọc");
+                    readerCtrl.findByID();
                     break;
                 case 3:
                     System.out.println("Tìm theo loại bạn đọc");
+                    readerCtrl.findByType();
                     break;
                 case 0:
                     break;

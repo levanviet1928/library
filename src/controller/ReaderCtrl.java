@@ -5,6 +5,7 @@ import dao.ReaderDAO;
 import model.Person;
 import model.Reader;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ReaderCtrl extends PersonCtrl {
@@ -173,5 +174,54 @@ public class ReaderCtrl extends PersonCtrl {
             System.out.println("Xóa thất bại");
         }
 
+    }
+
+    @Override
+    public void findByName() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập tên cần tìm kiếm: ");
+        String name = "";
+        name = sc.nextLine();
+        ReaderDAO readerDAO = new ReaderDAO();
+        ArrayList<Reader> lstReader = (ArrayList) readerDAO.findByName(name);
+        if (lstReader.size() > 0) {
+            for (Reader r : lstReader) {
+                System.out.println(r);
+            }
+        } else {
+            System.out.println("Tên vừa nhập không tồn tại");
+        }
+    }
+
+    @Override
+    public void findByID() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập ID cần tìm kiếm: ");
+        String id = "";
+        id = sc.nextLine();
+        ReaderDAO readerDAO = new ReaderDAO();
+        Reader result = (Reader) readerDAO.findByID(id);
+        if (result == null) {
+            System.out.println("ID không tồn tại");
+        } else {
+            System.out.println(result);
+        }
+
+    }
+
+    public void findByType() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập thể loại cần tìm kiếm: ");
+        String name = "";
+        name = sc.nextLine();
+        ReaderDAO readerDAO = new ReaderDAO();
+        ArrayList<Reader> lstReader = readerDAO.findByType(name);
+        if (lstReader.size() > 0) {
+            for (Reader r : lstReader) {
+                System.out.println(r);
+            }
+        } else {
+            System.out.println("Tên vừa nhập không tồn tại");
+        }
     }
 }

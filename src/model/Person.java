@@ -70,6 +70,6 @@ public class Person {
                 ", fullName='" + fullName + '\'' +
                 ", address='" + address + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
-                ", gender='" + gender + " ";
+                ", gender='" + gender + '\'' + ", ";
     }
 }

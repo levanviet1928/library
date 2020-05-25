@@ -73,7 +73,6 @@ public class PersonDAO implements DAO<Person> {
      * @param name
      */
     public List<Person> findByName(String name) {
-        // TODO - implement PersonDAO.findByName
         throw new UnsupportedOperationException();
     }
 

@@ -112,4 +112,11 @@ public class PersonCtrl implements Ctr<Person> {
 
     }
 
+    public void findByName() {
+
+    }
+
+    public void findByID() {
+    }
+
 }
